@@ -122,7 +122,17 @@ def concepts2adj(node_ids):
                     if e_attr['rel'] >= 0 and e_attr['rel'] < n_rel:
                         adj[e_attr['rel']][s][t] = 1
     # cids += 1  # note!!! index 0 is reserved for padding
-    adj = coo_matrix(adj.reshape(-1, n_node))
+
+    ### chen begin
+    # print('chen adj -------->: ',adj.shape[1])
+    if adj.shape[1] != 0:
+        adj = coo_matrix(adj.reshape(-1, n_node))
+    else:
+        # adj = coo_matrix(adj.reshape(17, 0))
+        adj = coo_matrix(np.ones((n_rel, 1), dtype=np.uint8))
+        cids = np.array([1], dtype=np.int32)
+    # print('chen adj <--------: ',adj.shape)
+    ### chen end
     return adj, cids
 
 
