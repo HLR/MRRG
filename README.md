@@ -45,7 +45,7 @@ sh data_process.sh
 ```
 
 >- openie: 5-6 hours
->- grounding: 3-4 hours
+>- graph building: 3-4 hours
 
 2. Run the training code:
 
