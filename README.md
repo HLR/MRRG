@@ -2,7 +2,10 @@
 
 Paper name: Relevant CommonSense Subgraphs for "What if..." Procedural Reasoning (ACL 2022 findings)
 
-## running the evaluation code
+
+<p align="center"><img width="95%" src="images/MRRG.jpg" /></p>
+
+## Running the evaluation code
 
 1. Download the ckpt files (the link is shown in the ckpt folder);
 
@@ -31,11 +34,11 @@ CUDA_VISIBLE_DEVICES=1 python run_MRRG.py --model_type roberta_cons --model_name
 ```
 
 
-## Train the code from yourself
+## Train the code by yourself
 
 1. Graph Construction:
 
-It will take a super long time (at least 7 hours.)
+It will take a super long time (at least 10 hours.)
 
 ```
 sh data_process.sh
@@ -52,7 +55,7 @@ CUDA_VISIBLE_DEVICES=1 python -u run_MRRG.py --model_type roberta_cons --model_n
 
 3. Experiment setup:
 >- We use 1 NVIDIA TITAN RTX to train our MRRG architecture. 
->- The batch size is 8. During training process.
+>- The batch size is 8 during training process.
 >- The architecture uses 11139MiB GPU memory.
 >- The training process spends 5:32:50.
 >- The test accuracy in WIQA test V2 is in the range of [$79.9\%$, $81.0\%$]
@@ -86,7 +89,3 @@ test: {'wiqa_': 0.7995337995337995}
 >- cpnet
 >- transe
 >- OpenIE: https://storage.googleapis.com/allennlp-public-models/openie-model.2020.03.26.tar.gz
-
-
-### running time:
->- openie data preprocessing: 5-7 hours
