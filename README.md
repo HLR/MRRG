@@ -58,7 +58,7 @@ CUDA_VISIBLE_DEVICES=1 python -u run_MRRG.py --model_type roberta_cons --model_n
 >- The batch size is 8 during training process.
 >- The architecture uses 11139MiB GPU memory.
 >- The training process spends 5:32:50.
->- The test accuracy in WIQA test V2 is in the range of [$79.9\%$, $81.0\%$]
+>- The test accuracy in WIQA test V2 is in the range of [79.8\%, 80.5\%]
 
 
 
