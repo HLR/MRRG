@@ -47,7 +47,7 @@ sh data_process.sh
 >- openie: 5-6 hours
 >- graph building: 3-4 hours
 
-2. Run the training code:
+2. Run the training code in RoBERTa-base setting:
 
 ```
 CUDA_VISIBLE_DEVICES=1 python -u run_MRRG.py --model_type roberta_cons --model_name_or_path roberta-base --task_name wiqa --do_train --data_dir (your_data_save_dir) --max_seq_length 256 --per_gpu_eval_batch_size=16 --output_dir (your_model_save_dir) --per_gpu_train_batch_size=8 --gradient_accumulation_steps=16 --learning_rate 2e-5 --num_train_epochs 10.0 --weight_decay 0.01 --lambda_a 0.5 --lambda_b 0.1 --seed 789 --unfreeze_epoch 3 --format fairseq --fix_trans -ih 0 -enc roberta-base -ds wiqa -mbs 8 -sl 80 -me 2
