@@ -73,7 +73,6 @@ GPU memory：11139MiB
 Test:
 CUDA_VISIBLE_DEVICES=1 python run_MRRG.py --model_type roberta_cons --model_name_or_path ./output_add_relation_10_true_graph_20220307 --task_name wiqa --do_test --data_dir ./wiqa_augment/ --max_seq_length 256 --per_gpu_eval_batch_size=8 --weight_decay 0.01 --output_dir ./output_add_relation_10_true_graph_20220307 --seed 789
 
-test: {'wiqa_': 0.7995337995337995}
 ```
 
 
